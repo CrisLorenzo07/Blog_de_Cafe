@@ -4,6 +4,7 @@
   --fuenteParrafos: "Open Sans", sans-serif;
 
   --primario: #784d3c;
+  --gris: #e5e7e9;
   --blanco: #fff;
   --negro: #000000;
 }
@@ -139,4 +140,24 @@ img {
     grid-template-columns: 2fr 1fr;
     column-gap: 4rem;
   }
+}
+
+.entrada {
+  border-bottom: 1px solid var(--gris);
+  margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+  /*Selecciona el ultimo elemento de la clase entrada*/
+  border: none;
+  margin-bottom: 0;
+}
+
+.boton {
+  display: block;
+  font-family: var(--fuenteHeading);
+}
+
+.boton--primario {
+  background-color: var(--negro);
 }
