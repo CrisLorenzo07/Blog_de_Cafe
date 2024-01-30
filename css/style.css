@@ -28,8 +28,9 @@ body {
 /* Globales*/
 
 .contenedor {
-  max-width: 120rem;
-  width: 90%;
+  /* max-width: 120rem; /*Maximo 1200 px mientras tenga ese espacio disponible, pero si es menos usa un width del 90%*/
+  /* width: 90%; El width al 90% hace que el contenido no se desborde */
+  width: min(90%, 120rem);
   margin: 0 auto;
 }
 
@@ -42,6 +43,7 @@ h2,
 h3,
 h4 {
   font-family: var(--fuenteHeading);
+  line-height: 1.2;
 }
 
 h1 {
@@ -101,6 +103,9 @@ img {
   }
 }
 
+.barra {
+  padding: 4rem 0;
+}
 @media (min-width: 768px) {
   .barra {
     display: flex;
@@ -154,10 +159,104 @@ img {
 }
 
 .boton {
-  display: block;
+  display: block; /* Para que ocupe todo el ancho*/
   font-family: var(--fuenteHeading);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .boton {
+    display: inline-block; /*Para que no ocupe todo el ancho*/
+  }
+}
 .boton--primario {
   background-color: var(--negro);
+}
+
+.boton--secundario {
+  background-color: var(--primario);
+}
+
+/* el -- signica que esta heredando de otra clase, pero en algo va a cambiar*/
+
+/*Naranja: Margin*/
+/*Verde: Padding*/
+
+.cursos {
+  list-style: none; /* Elimina estilo de viñetas*/
+}
+
+.widget-curso {
+  border-bottom: 1px solid var(--gris);
+  margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type {
+  /*Siempre tomara el ultiumo elemento*/
+  border: none;
+  margin-bottom: 0;
+}
+.widget-cursos__label {
+  font-family: var(--fuenteHeading);
+  font-weight: 700;
+}
+
+.widget-cursos__info {
+  font-weight: 400;
+}
+.widget-cursos__label,
+.widget-cursos__info {
+  font-size: 2rem;
+}
+
+.footer {
+  background-color: var(--negro);
+  padding-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+/*Se puede reutilizar las clases de : barra de navegacion y el logo, gracias a BEM, ya que utiliza bloques y cada uno tiene sus propios estilos*/
+
+/*Sobre Nosotros*/
+
+@media (min-width: 768px) {
+  /* -- Forma de hacerlo con Flex: Esto se vera bien en un dispositivo que nos soporte gap --
+
+   .sobre-nosotros {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sobre-nosotros__imagen,
+  .sobre-nosotros__texto {
+    flex-basis: calc(50% - 1rem);
+  }
+
+  -- Factor de crecimiento: si la imagen crece 1 px el texto crecera 2 px --
+
+  .sobre-nosotros__texto {
+    flex: 2;
+
+    -- otra forma: --
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .sobre-nosotros__imagen {
+    flex: 1;
+
+    -- otra forma: --
+    flex: 0 0 calc(50% - 1rem);
+  } */
+
+  /*Forma de hacerlo con grid*/
+
+  .sobre-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
 }
