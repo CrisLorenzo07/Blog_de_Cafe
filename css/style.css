@@ -167,6 +167,8 @@ img {
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 700;
+  margin-bottom: 2rem;
+  border: none;
 }
 
 @media (min-width: 768px) {
@@ -174,6 +176,11 @@ img {
     display: inline-block; /*Para que no ocupe todo el ancho*/
   }
 }
+
+.boton:hover {
+  cursor: pointer;
+}
+
 .boton--primario {
   background-color: var(--negro);
 }
@@ -259,4 +266,74 @@ img {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
   }
+}
+
+/*Nuestros Cursos*/
+
+.curso {
+  padding: 3rem;
+  border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+  .curso {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1fr 2fr: 1fr es el 33% y 2fr es el 66%*/
+    column-gap: 2rem; /*Espacio entre columnas*/
+  }
+}
+.curso:last-of-type {
+  border: none;
+}
+
+.cursos__label {
+  font-family: var(--fuenteHeading);
+  font-weight: 700;
+}
+
+.cursos__info {
+  font-weight: 400;
+}
+.cursos__label,
+.cursos__info {
+  font-size: 2rem;
+}
+
+/*Contacto*/
+
+.contacto-bg {
+  background-image: url(../media/images/contacto.jpg);
+  background-size: cover; /*Para que la imagen se ajuste al contenedor*/
+  background-repeat: no-repeat; /*Para que no se repita la imagen*/
+  background-position: center center; /*Para que la imagen se centre*/
+  height: 40rem;
+}
+
+/*Que es un ID? Es un selector que se utiliza para identificar un elemento unico en el documento, no se puede repetir en el documento, solo se puede utilizar una vez*/
+
+.formulario {
+  background-color: var(--blanco);
+  margin: -5rem auto 0 auto; /*Para que se vea bien en dispositivos moviles*/
+  padding: 5rem;
+  width: 95%;
+}
+
+.campo {
+  display: flex; /*Para que los elementos se alineen en una sola linea*/
+  margin-bottom: 2rem;
+}
+
+.campo__label {
+  flex: 0 0 9rem; /*Para que ocupe el 0% del espacio disponible, no crezca ni se encoja y tenga un ancho de 9rem*/
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.campo__field {
+  flex: 1; /*Para que ocupe todo el espacio disponible*/
+  border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+  height: 20rem;
 }
