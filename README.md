@@ -1,6 +1,10 @@
 # Blog de Café ☕
 
-Un sitio web moderno de un blog dedicado a compartir artículos, recetas y cursos sobre café. Este proyecto demuestra el uso de HTML5 semántico, CSS3 responsivo y buenas prácticas de optimización web.
+🔗 Demo en vivo: https://blog-de-cafe-cl.netlify.app/
+🚀 Deploy: Netlify
+
+Sitio web moderno de un blog dedicado a compartir artículos, recetas y cursos sobre café.
+El proyecto demuestra el uso de HTML5 semántico, CSS3 responsivo y buenas prácticas de optimización web, orientadas a rendimiento y mantenibilidad.
 
 ## 📋 Descripción del Proyecto
 
@@ -91,7 +95,7 @@ Blog_de_Cafe/
 
 | Color | Código | Uso |
 |-------|--------|-----|
-| Marrón Primario | `#784d3c` | Botones, headings, acentos |
+| Marrón | `#784d3c` | Botones, headings, acentos |
 | Gris | `#e5e7e9` | Fondos secundarios |
 | Blanco | `#fff` | Fondos principales, texto claro |
 | Negro | `#000000` | Texto principal |

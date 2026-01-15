@@ -11,7 +11,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /*1rem = 10px*/
+  font-size: 62.5%;
 }
 
 *,
@@ -25,11 +25,7 @@ body {
   line-height: 2;
 }
 
-/* Globales*/
-
 .contenedor {
-  /* max-width: 120rem; /*Maximo 1200 px mientras tenga ese espacio disponible, pero si es menos usa un width del 90%*/
-  /* width: 90%; El width al 90% hace que el contenido no se desborde */
   width: min(90%, 120rem);
   margin: 0 auto;
 }
@@ -65,23 +61,18 @@ h4 {
 img {
   max-width: 100%;
 }
-/*Lo que se va a utilzar mas de una vez lo mas conveniente es escribirlas en globales*/
-
-/*Utlidades*/
 
 .no-margin {
-  margin: 0; /*Elimina los margin automaticos*/
+  margin: 0;
 }
 
 .no-padding {
-  padding: 0; /* Elimina los padding automaticos*/
+  padding: 0;
 }
 
 .centrar-texto {
   text-align: center;
 }
-
-/*Header*/
 
 .webp,
 .header {
@@ -96,7 +87,7 @@ img {
   height: 60rem;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; /*center center: centrara la imagen horizontalmente y verticalmente, funciona con background-size: cover;*/
+  background-position: center center;
 }
 
 .header__texto {
@@ -161,13 +152,12 @@ img {
 }
 
 .entrada:last-of-type {
-  /*Selecciona el ultimo elemento de la clase entrada*/
   border: none;
   margin-bottom: 0;
 }
 
 .boton {
-  display: block; /* Para que ocupe todo el ancho*/
+  display: block;
   font-family: var(--fuenteHeading);
   color: var(--blanco);
   text-align: center;
@@ -181,7 +171,7 @@ img {
 
 @media (min-width: 768px) {
   .boton {
-    display: inline-block; /*Para que no ocupe todo el ancho*/
+    display: inline-block;
   }
 }
 
@@ -197,13 +187,8 @@ img {
   background-color: var(--primario);
 }
 
-/* el -- signica que esta heredando de otra clase, pero en algo va a cambiar*/
-
-/*Naranja: Margin*/
-/*Verde: Padding*/
-
 .cursos {
-  list-style: none; /* Elimina estilo de viñetas*/
+  list-style: none;
 }
 
 .widget-curso {
@@ -212,7 +197,6 @@ img {
 }
 
 .widget-curso:last-of-type {
-  /*Siempre tomara el ultiumo elemento*/
   border: none;
   margin-bottom: 0;
 }
@@ -235,40 +219,12 @@ img {
   margin-top: 4rem;
 }
 
-/*Se puede reutilizar las clases de : barra de navegacion y el logo, gracias a BEM, ya que utiliza bloques y cada uno tiene sus propios estilos*/
-
-/*Sobre Nosotros*/
+.footer p{
+  color: var(--blanco);
+  text-align: center;
+}
 
 @media (min-width: 768px) {
-  /* -- Forma de hacerlo con Flex: Esto se vera bien en un dispositivo que nos soporte gap --
-
-   .sobre-nosotros {
-    display: flex;
-    justify-content: space-between;
-  }
-  .sobre-nosotros__imagen,
-  .sobre-nosotros__texto {
-    flex-basis: calc(50% - 1rem);
-  }
-
-  -- Factor de crecimiento: si la imagen crece 1 px el texto crecera 2 px --
-
-  .sobre-nosotros__texto {
-    flex: 2;
-
-    -- otra forma: --
-    flex: 0 0 calc(50% - 1rem);
-  }
-
-  .sobre-nosotros__imagen {
-    flex: 1;
-
-    -- otra forma: --
-    flex: 0 0 calc(50% - 1rem);
-  } */
-
-  /*Forma de hacerlo con grid*/
-
   .sobre-nosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -286,8 +242,8 @@ img {
 @media (min-width: 768px) {
   .curso {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* 1fr 2fr: 1fr es el 33% y 2fr es el 66%*/
-    column-gap: 2rem; /*Espacio entre columnas*/
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
   }
 }
 .curso:last-of-type {
@@ -307,38 +263,34 @@ img {
   font-size: 2rem;
 }
 
-/*Contacto*/
-
 .contacto-bg {
   background-image: url(../media/images/contacto.jpg);
-  background-size: cover; /*Para que la imagen se ajuste al contenedor*/
-  background-repeat: no-repeat; /*Para que no se repita la imagen*/
-  background-position: center center; /*Para que la imagen se centre*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 40rem;
 }
 
-/*Que es un ID? Es un selector que se utiliza para identificar un elemento unico en el documento, no se puede repetir en el documento, solo se puede utilizar una vez*/
-
 .formulario {
   background-color: var(--blanco);
-  margin: -5rem auto 0 auto; /*Para que se vea bien en dispositivos moviles*/
+  margin: -5rem auto 0 auto;
   padding: 5rem;
   width: 95%;
 }
 
 .campo {
-  display: flex; /*Para que los elementos se alineen en una sola linea*/
+  display: flex;
   margin-bottom: 2rem;
 }
 
 .campo__label {
-  flex: 0 0 9rem; /*Para que ocupe el 0% del espacio disponible, no crezca ni se encoja y tenga un ancho de 9rem*/
+  flex: 0 0 9rem;
   text-align: right;
   padding-right: 2rem;
 }
 
 .campo__field {
-  flex: 1; /*Para que ocupe todo el espacio disponible*/
+  flex: 1;
   border: 1px solid var(--gris);
 }
 
