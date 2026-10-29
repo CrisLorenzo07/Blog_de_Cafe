@@ -1,4 +1,6 @@
 :root {
+  --imagen-banner: url(../media/images/banner.jpg);
+  --imagen-contacto: url(../media/images/contacto.jpg);
   --fuenteHeading: "PT Sans", sans-serif;
 
   --fuenteParrafos: "Open Sans", sans-serif;
@@ -61,6 +63,7 @@ h4 {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .no-margin {
@@ -75,17 +78,9 @@ img {
   text-align: center;
 }
 
-.webp,
-.header {
-  background-image: url(../media/images/banner.webp);
-}
-
-.no-webp,
-.header {
-  background-image: url(../media/images/banner.jpg);
-}
 .header {
   height: 60rem;
+  background-image: var(--imagen-banner);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -268,7 +263,7 @@ img {
 }
 
 .contacto-bg {
-  background-image: url(../media/images/contacto.jpg);
+  background-image: var(--imagen-contacto);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -390,7 +385,7 @@ img {
 .formacion > .header {
   height: auto;
   min-height: 42rem;
-  background-image: linear-gradient(90deg, rgba(26, 19, 15, .85), rgba(26, 19, 15, .4)), url(../media/images/banner.jpg);
+  background-image: linear-gradient(90deg, rgba(26, 19, 15, .85), rgba(26, 19, 15, .4)), var(--imagen-banner);
 }
 .pagina-contacto .header__texto,
 .inicio .header__texto,
@@ -492,7 +487,7 @@ img {
 .pagina-nosotros > .header {
   height: auto;
   min-height: 42rem;
-  background-image: linear-gradient(90deg, rgba(26, 19, 15, .85), rgba(26, 19, 15, .4)), url(../media/images/banner.jpg);
+  background-image: linear-gradient(90deg, rgba(26, 19, 15, .85), rgba(26, 19, 15, .4)), var(--imagen-banner);
 }
 .pagina-nosotros .header__texto { margin: 4rem auto 0; padding: 0 5% 6rem; max-width: 96rem; }
 .pagina-nosotros .header__texto .header__promesa { font-size: clamp(3rem, 4vw, 4.6rem); letter-spacing: -.08rem; }
@@ -569,3 +564,16 @@ img {
 :where(a, button, input, select, textarea):focus-visible { outline: 3px solid #774632; outline-offset: 4px; }
 .header a:focus-visible, .footer a:focus-visible { outline-color: #edcfad; }
 #email-ayuda { color: #655b52; font-size: 1.4rem; }
+
+/* Native format selection: JPEG fallback; WebP chosen when supported. */
+@supports (background-image: image-set(url("image.webp") type("image/webp"))) {
+  :root {
+    --imagen-banner: image-set(url(../media/images/banner.webp) type("image/webp"), url(../media/images/banner.jpg) type("image/jpeg"));
+    --imagen-contacto: image-set(url(../media/images/contacto.webp) type("image/webp"), url(../media/images/contacto.jpg) type("image/jpeg"));
+  }
+}
+/* picture must fill grid cells previously occupied directly by an img. */
+.ficha-curso__imagen picture, .nosotros-presentacion__imagen picture { display: block; height: 100%; }
+.lectura article > picture { display: block; margin: 3rem 0; }
+.lectura article > picture img { display: block; width: 100%; height: auto; }
+picture img { vertical-align: middle; }
