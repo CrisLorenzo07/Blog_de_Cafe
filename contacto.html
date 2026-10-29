@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto: consultas y colaboraciones | BlogDeCafé</title>
-    <meta name="description" content="Consulta sobre cursos, comparte comentarios o propone colaboraciones a BlogDeCafé. El formulario está disponible con el envío pendiente de configurar.">
+    <meta name="description"
+        content="Consulta sobre cursos, comparte comentarios o propone colaboraciones a BlogDeCafé. El formulario está disponible con el envío pendiente de configurar.">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -43,8 +46,8 @@
         <div class="contacto-bg" aria-hidden="true"></div>
 
         <form class="formulario" id="consulta" aria-describedby="consulta-ayuda">
-            <p id="consulta-ayuda">Los campos marcados con * son obligatorios. El envío está pendiente de configurar.</p>
-            <p>Escríbenos para consultar sobre cursos, proponer colaboraciones o compartir comentarios sobre las guías del blog. Una consulta sobre un curso no confirma la inscripción ni reserva una plaza.</p>
+            <p>Escríbenos para consultar sobre cursos, proponer colaboraciones o compartir comentarios sobre las guías
+                del blog.</p>
             <div class="campo">
                 <label class="campo__label" for="curso">Tema</label>
                 <select class="campo__field" id="curso" name="curso">
@@ -58,23 +61,23 @@
             </div>
             <div class="campo">
                 <label class="campo__label" for="nombre">Nombre *</label>
-                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre" name="nombre" autocomplete="name" maxlength="100" required>
+                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre" name="nombre"
+                    autocomplete="name" maxlength="100" required>
             </div>
             <div class="campo">
                 <label class="campo__label" for="email">E-mail *</label>
-                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email" name="email" aria-describedby="email-ayuda" autocomplete="email" maxlength="254" required>
+                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email" name="email"
+                    aria-describedby="email-ayuda" autocomplete="email" maxlength="254" required>
             </div>
             <p id="email-ayuda">Usa un correo con formato nombre@dominio.com.</p>
             <div class="campo">
                 <label class="campo__label" for="mensaje">Mensaje *</label>
-                <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" maxlength="5000" required></textarea>
+                <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" maxlength="5000"
+                    required></textarea>
             </div>
-            <div id="uso-datos" class="contacto-privacidad">
-                <h2>Cómo usamos tus datos</h2>
-                <p>El envío está pendiente de configurar. Por ahora, los datos que completes permanecen en este formulario y no se envían ni se guardan en un servidor. Evita incluir información sensible.</p>
-                <label><input type="checkbox" id="privacidad" name="privacidad" required> He leído cómo se usarán mis datos para atender esta consulta. *</label>
-            </div>
-            <noscript><p>El envío de consultas todavía no está disponible.</p></noscript>
+            <noscript>
+                <p>El envío de consultas todavía no está disponible.</p>
+            </noscript>
             <div class="campo">
                 <button type="submit" class="boton boton--primario">Enviar consulta</button>
             </div>
