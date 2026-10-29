@@ -3,7 +3,7 @@
   <h1>BlogDeCafé</h1>
   <blockquote>Aprende a preparar mejor café en casa.</blockquote>
   <p>Blog de guías y recetas de café para principiantes y aficionados, creado con HTML5, CSS3, JavaScript y desplegado con Nginx.</p>
-  <p><strong>Ver Demo:</strong> https://blogdecafe.criswebserver.site/ • <strong>Ver Código:</strong> https://github.com/CrisLorenzo07/Blog_de_Cafe</p>
+  <p><a href="https://blogdecafe.criswebserver.site/">Ver Demo</a> • <a href="https://github.com/CrisLorenzo07/Blog_de_Cafe">Ver Código</a></p>
 </div>
 
 ## Descripción
