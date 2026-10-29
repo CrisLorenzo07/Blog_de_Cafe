@@ -385,3 +385,134 @@ img {
   #consulta.formulario { padding: 2rem; }
   #consulta .campo__field { width: 100%; min-width: 0; }
 }
+
+/* Catálogo y fichas de formación. */
+.formacion {
+  --primario: #774632;
+  background: #faf7f2;
+  color: #322b26;
+  line-height: 1.75;
+}
+.formacion *, .formacion *::before, .formacion *::after { box-sizing: border-box; }
+.formacion > .header {
+  height: auto;
+  min-height: 42rem;
+  background-image: linear-gradient(90deg, rgba(26, 19, 15, .85), rgba(26, 19, 15, .4)), url(../media/images/banner.jpg);
+}
+.formacion .header__texto { margin: 4rem auto 0; padding: 0 5% 6rem; max-width: 96rem; }
+.formacion .header__texto h2 { font-size: clamp(3rem, 4vw, 4.6rem); letter-spacing: -.08rem; }
+.formacion .header__texto p { margin-top: 1.6rem; color: #eee3d8; }
+.formacion .navegacion__enlace[aria-current="page"] { text-decoration: underline; text-underline-offset: .6rem; }
+.formacion main a:focus-visible { outline: 3px solid #a56b3f; outline-offset: 5px; }
+.formacion .boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.8rem;
+  padding: 1.3rem 2rem;
+  margin: 0;
+  border-radius: .7rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-transform: none;
+  color: #fff;
+  text-decoration: none;
+}
+.formacion .boton:hover { background: #583727; }
+.formacion .catalogo, .formacion .ficha-curso { padding-top: 6rem; padding-bottom: 2rem; }
+.catalogo__titulo { max-width: 72rem; margin-bottom: 3.6rem; }
+.catalogo__titulo h1 { font-size: clamp(3.2rem, 4vw, 4.6rem); letter-spacing: -.12rem; margin: 0; }
+.catalogo__rejilla { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.8rem; }
+.formacion .curso {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fffdf9;
+  border: 1px solid #e5d9cd;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+.formacion .curso__imagen img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.formacion .curso__informacion { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 2.6rem; }
+.formacion .curso__informacion h2 { font-size: 2.6rem; letter-spacing: -.04rem; }
+.formacion .curso__estado { font-size: 1.2rem; color: #6b4934; background: #f1e8db; border-radius: .5rem; padding: .6rem 1rem; margin: 1.6rem 0 0; }
+.formacion .curso__descripcion { font-size: 1.5rem; color: #655b52; }
+.formacion .curso__resumen { font-size: 1.4rem; line-height: 1.9; border-top: 1px solid #e8dfd5; padding-top: 1.8rem; width: 100%; margin: auto 0 2.4rem; }
+.formacion .curso__informacion .boton { width: 100%; }
+.ficha-curso__presentacion { display: grid; grid-template-columns: 1fr 1fr; background: #efe7dc; border: 1px solid #e5d9cd; border-radius: 2rem; overflow: hidden; }
+.ficha-curso__imagen img { display: block; width: 100%; height: 100%; min-height: 36rem; object-fit: cover; }
+.ficha-curso__introduccion { align-self: center; padding: clamp(2.4rem, 4vw, 5rem); }
+.ficha-curso__introduccion h1 { margin: 0 0 2rem; font-size: clamp(3.2rem, 3.8vw, 4.8rem); letter-spacing: -.1rem; }
+.ficha-curso__introduccion p { color: #655b52; margin: 0; }
+.ficha-curso__columnas { display: grid; grid-template-columns: minmax(0, 1fr) 33rem; gap: 3.6rem; margin-top: 3.6rem; align-items: start; }
+.ficha-curso__datos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.8rem; margin: 0; padding: 1rem 3rem; background: #fffdf9; border: 1px solid #e5d9cd; border-radius: 1.4rem; }
+.ficha-curso__dato { padding: 2rem 0; border-bottom: 1px solid #e8dfd5; min-width: 0; }
+.ficha-curso__dato:last-child { grid-column: 1 / -1; border-bottom: none; }
+.ficha-curso__dato dt { font-size: 1.25rem; color: #774632; }
+.ficha-curso__dato dd { margin: .8rem 0 0; font-size: 1.5rem; }
+.ficha-curso__bloque { margin-top: 3rem; padding: 0 1rem; }
+.ficha-curso__bloque h2 { font-size: 2.7rem; margin: 0 0 1.2rem; }
+.ficha-curso__bloque p { color: #655b52; margin: 0; }
+.ficha-curso__consulta { background: #efe7dc; border: 1px solid #e5d9cd; border-radius: 1.4rem; padding: 2.8rem; }
+.ficha-curso__consulta h2 { margin: 0 0 1.6rem; font-size: 2.6rem; }
+.ficha-curso__consulta p { font-size: 1.4rem; color: #655b52; }
+.ficha-curso__consulta .boton { width: 100%; margin: 1rem 0; }
+.ficha-curso__consulta p:last-child { margin-bottom: 0; }
+.ficha-curso__consulta p a { color: #774632; text-decoration: underline; text-underline-offset: .3rem; }
+.formacion > .footer { margin-top: 6rem; background: #28211c; }
+@media (max-width: 1050px) {
+  .catalogo__rejilla { grid-template-columns: 1fr; }
+  .formacion .curso { display: grid; grid-template-columns: 35% minmax(0, 1fr); }
+  .formacion .curso__imagen img { height: 100%; aspect-ratio: auto; }
+  .ficha-curso__columnas { grid-template-columns: minmax(0, 1fr) 28rem; gap: 2.4rem; }
+}
+@media (max-width: 767px) {
+  .formacion > .header { min-height: auto; }
+  .formacion .header__texto { margin-top: 2rem; padding-bottom: 4rem; }
+  .formacion .catalogo, .formacion .ficha-curso { padding-top: 3.6rem; }
+  .formacion .curso { display: flex; }
+  .formacion .curso__imagen img { height: auto; aspect-ratio: 16 / 9; }
+  .formacion .curso__informacion { padding: 2.4rem; }
+  .ficha-curso__presentacion, .ficha-curso__columnas { grid-template-columns: 1fr; }
+  .ficha-curso__imagen img { min-height: 0; height: auto; aspect-ratio: 16 / 9; }
+  .ficha-curso__datos { grid-template-columns: 1fr; padding: .5rem 2.4rem; }
+  .ficha-curso__columnas { gap: 3rem; margin-top: 2.4rem; }
+  .ficha-curso__consulta { padding: 2.4rem; }
+}
+
+/* Nosotros: imagen protagonista y lectura por secciones. */
+.pagina-nosotros { background: #faf7f2; color: #322b26; line-height: 1.75; }
+.pagina-nosotros *, .pagina-nosotros *::before, .pagina-nosotros *::after { box-sizing: border-box; }
+.pagina-nosotros > .header {
+  height: auto;
+  min-height: 42rem;
+  background-image: linear-gradient(90deg, rgba(26, 19, 15, .85), rgba(26, 19, 15, .4)), url(../media/images/banner.jpg);
+}
+.pagina-nosotros .header__texto { margin: 4rem auto 0; padding: 0 5% 6rem; max-width: 96rem; }
+.pagina-nosotros .header__texto h2 { font-size: clamp(3rem, 4vw, 4.6rem); letter-spacing: -.08rem; }
+.pagina-nosotros .header__texto p { margin-top: 1.6rem; color: #eee3d8; }
+.pagina-nosotros .navegacion__enlace[aria-current="page"] { text-decoration: underline; text-underline-offset: .6rem; }
+.nosotros-contenido { padding-top: 6rem; padding-bottom: 2rem; }
+.nosotros-titulo h1 { margin: 0 0 3.6rem; font-size: clamp(3.2rem, 4vw, 4.6rem); letter-spacing: -.12rem; }
+.nosotros-presentacion { display: grid; grid-template-columns: 1.2fr 1fr; background: #efe7dc; border: 1px solid #e5d9cd; border-radius: 2rem; overflow: hidden; }
+.nosotros-presentacion__imagen img { display: block; width: 100%; height: 100%; min-height: 40rem; object-fit: cover; }
+.nosotros-presentacion__texto { padding: clamp(2.4rem, 4vw, 5rem); align-self: center; }
+.nosotros-presentacion h2 { font-size: clamp(2.8rem, 3vw, 3.8rem); margin: 0 0 2rem; letter-spacing: -.06rem; }
+.nosotros-presentacion p { margin: 0; color: #655b52; }
+.nosotros-detalles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.8rem; margin-top: 3.6rem; }
+.nosotros-detalle { background: #fffdf9; border: 1px solid #e5d9cd; border-radius: 1.4rem; padding: 3.2rem; }
+.nosotros-detalle:last-child { grid-column: 1 / -1; }
+.nosotros-detalle h2 { font-size: 2.7rem; margin: 0 0 1.6rem; }
+.nosotros-detalle p { color: #655b52; margin: 0; }
+.nosotros-detalle a { color: #774632; text-decoration: underline; text-underline-offset: .3rem; }
+.nosotros-contenido a:focus-visible { outline: 3px solid #a56b3f; outline-offset: 4px; }
+.pagina-nosotros > .footer { margin-top: 6rem; background: #28211c; }
+@media (max-width: 767px) {
+  .pagina-nosotros > .header { min-height: auto; }
+  .pagina-nosotros .header__texto { margin-top: 2rem; padding-bottom: 4rem; }
+  .nosotros-contenido { padding-top: 3.6rem; }
+  .nosotros-presentacion, .nosotros-detalles { grid-template-columns: 1fr; }
+  .nosotros-presentacion__imagen img { height: auto; min-height: 0; aspect-ratio: 4 / 3; }
+  .nosotros-detalle { padding: 2.4rem; }
+  .nosotros-detalles { gap: 2rem; margin-top: 2rem; }
+}

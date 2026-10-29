@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="formacion">
     <header class="header">
 
         <div class="contenedor">
@@ -26,7 +26,7 @@
 
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="cursos.html" class="navegacion__enlace" aria-current="page">Cursos</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                 </nav>
             </div>
@@ -38,8 +38,22 @@
         </div>
     </header>
 
-    <main class="contenedor lectura">
-<article><p class="aviso-ejemplo">Programa de ejemplo · Datos simulados. No es una convocatoria real.</p><h1>4 recetas de café para principiantes</h1><p>Practica cuatro bebidas con ingredientes sencillos y aprende a ajustar las proporciones. La propuesta se centra en organizar los ingredientes y repetir las preparaciones con la cafetera que ya tienes.</p><img src="media/images/curso3.jpg" alt="Utensilios y preparación de café"><dl><dt><strong>Público y nivel</strong></dt><dd>Principiantes que ya preparan café con una cafetera doméstica.</dd><dt><strong>Duración</strong></dt><dd>Un encuentro de 2 horas.</dd><dt><strong>Modalidad</strong></dt><dd>En línea, con preparación paso a paso.</dd><dt><strong>Fecha y horario propuestos</strong></dt><dd>5 de diciembre de 2026, de 16:00 a 18:00 (Uruguay, UTC−3).</dd><dt><strong>Ubicación propuesta</strong></dt><dd>Sala virtual; el enlace se definiría al confirmar la convocatoria.</dd><dt><strong>Precio de ejemplo</strong></dt><dd>1.200 UYU por persona</dd><dt><strong>Disponibilidad</strong></dt><dd>15 plazas previstas; inscripciones cerradas en esta demostración.</dd><dt><strong>Materiales necesarios</strong></dt><dd>Café, leche o bebida vegetal, cacao, hielo, canela, taza, vaso resistente al calor, cucharas y jarra medidora.</dd><dt><strong>Aprendizajes esperados</strong></dt><dd>Preparar café con leche, café con hielo, café con cacao y café con canela, con medidas y ajustes al gusto.</dd></dl><h2>Consultar disponibilidad</h2><p>Esta demostración permite preparar una consulta. No reserva plazas, no procesa pagos y no envía mensajes.</p><a class="boton boton--secundario" href="contacto.html?curso=recetas#consulta">Preparar consulta de disponibilidad</a><p><a href="cursos.html">Volver a cursos y talleres</a></p></article>
+    <main class="contenedor ficha-curso">
+<article>
+            <div class="ficha-curso__presentacion">
+                <div class="ficha-curso__imagen"><img src="media/images/curso3.jpg" alt="Utensilios y preparación de café"></div>
+                <header class="ficha-curso__introduccion"><h1>4 recetas de café para principiantes</h1><p>Practica cuatro bebidas con ingredientes sencillos y aprende a ajustar las proporciones. La propuesta se centra en organizar los ingredientes y repetir las preparaciones con la cafetera que ya tienes.</p></header>
+            </div>
+            <div class="ficha-curso__columnas">
+                <div class="ficha-curso__contenido">
+                    <dl class="ficha-curso__datos"><div class="ficha-curso__dato"><dt><strong>Público y nivel</strong></dt><dd>Principiantes que ya preparan café con una cafetera doméstica.</dd></div><div class="ficha-curso__dato"><dt><strong>Duración</strong></dt><dd>Un encuentro de 2 horas.</dd></div><div class="ficha-curso__dato"><dt><strong>Modalidad</strong></dt><dd>En línea, con preparación paso a paso.</dd></div><div class="ficha-curso__dato"><dt><strong>Fecha y horario propuestos</strong></dt><dd>5 de diciembre de 2026, de 16:00 a 18:00 (Uruguay, UTC−3).</dd></div><div class="ficha-curso__dato"><dt><strong>Ubicación propuesta</strong></dt><dd>Sala virtual; el enlace se definiría al confirmar la convocatoria.</dd></div><div class="ficha-curso__dato"><dt><strong>Precio de ejemplo</strong></dt><dd>1.200 UYU por persona</dd></div><div class="ficha-curso__dato"><dt><strong>Disponibilidad</strong></dt><dd>15 plazas previstas; inscripciones cerradas en esta demostración.</dd></div></dl>
+                    <section class="ficha-curso__bloque"><h2>Materiales necesarios</h2><p>Café, leche o bebida vegetal, cacao, hielo, canela, taza, vaso resistente al calor, cucharas y jarra medidora.</p></section><section class="ficha-curso__bloque"><h2>Aprendizajes esperados</h2><p>Preparar café con leche, café con hielo, café con cacao y café con canela, con medidas y ajustes al gusto.</p></section>
+                </div>
+                <aside class="ficha-curso__consulta" aria-labelledby="titulo-consulta">
+                    <h2 id="titulo-consulta">Consultar disponibilidad</h2><p>Esta demostración permite preparar una consulta. No reserva plazas, no procesa pagos y no envía mensajes.</p><a class="boton boton--secundario" href="contacto.html?curso=recetas#consulta">Preparar consulta de disponibilidad</a><p><a href="cursos.html">Volver a cursos y talleres</a></p>
+                </aside>
+            </div>
+        </article>
     </main>
 
 
@@ -52,7 +66,7 @@
 
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="cursos.html" class="navegacion__enlace" aria-current="page">Cursos</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                 </nav>
             </div>

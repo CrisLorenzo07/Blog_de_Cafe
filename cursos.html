@@ -14,18 +14,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="formacion">
     <header class="header">
 
         <div class="centenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <p class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></p>
                 </a>
 
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="cursos.html" class="navegacion__enlace" aria-current="page">Cursos</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                 </nav>
             </div>
@@ -36,47 +36,62 @@
         </div>
     </header>
 
-    <main class="contenedor">
-        <h3 class="centrar-texto">Propuestas de cursos y talleres</h3>
-        <p class="aviso-ejemplo">Programas de ejemplo con datos simulados: duración, fechas, modalidad, precios y plazas forman una propuesta coherente para mostrar el funcionamiento del sitio. No hay una convocatoria real ni inscripciones abiertas. «Ver más» abre la ficha de cada curso.</p>
+    <main class="contenedor catalogo">
+        <header class="catalogo__titulo"><h1>Propuestas de cursos y talleres</h1></header>
+        <div class="catalogo__rejilla">
 
-        <div class="curso" id="extraccion">
+        <article class="curso" id="extraccion">
             <div class="curso__imagen">
                 <img src="media/images/curso1.jpg" alt="imagen del curso">
             </div>
             <div class="curso__informacion">
-                <h4 class="no-margin">Técnicas de extracción de café</h4>
-                <p>Programa de ejemplo · Sin inscripciones abiertas</p>
-                <p class="curso__descripcion">Trabaja con una receta de referencia para entender cómo la proporción, la molienda y el tiempo cambian la taza. La propuesta combina una explicación inicial con práctica en tu propia cafetera.</p>
-                <p><strong>Duración:</strong> Dos encuentros de 90 minutos (3 horas en total).<br><strong>Modalidad:</strong> En línea, con práctica guiada en casa.<br><strong>Precio de ejemplo:</strong> 1.800 UYU por persona</p>
-                <a href="curso-extraccion.html" class="boton boton--secundario" aria-label="Ver más: Técnicas de extracción de café">Ver más</a>
+                <h2 class="no-margin">Técnicas de extracción de café</h2>
+                <p class="curso__estado">Programa de ejemplo · Sin inscripciones abiertas</p>
+                <p class="curso__descripcion">Trabaja con una receta de referencia para entender cómo la proporción, la
+                    molienda y el tiempo cambian la taza. La propuesta combina una explicación inicial con práctica en
+                    tu propia cafetera.</p>
+                <p class="curso__resumen"><strong>Duración:</strong> Dos encuentros de 90 minutos (3 horas en
+                    total).<br><strong>Modalidad:</strong> En línea, con práctica guiada en casa.<br><strong>Precio de
+                        ejemplo:</strong> 1.800 UYU por persona</p>
+                <a href="curso-extraccion.html" class="boton boton--secundario"
+                    aria-label="Ver más: Técnicas de extracción de café">Ver más</a>
             </div>
-        </div>
+        </article>
 
-        <div class="curso" id="granos">
+        <article class="curso" id="granos">
             <div class="curso__imagen">
                 <img src="media/images/curso2.jpg" alt="imagen del curso">
             </div>
             <div class="curso__informacion">
-                <h4 class="no-margin">Elegir y moler tus granos de café</h4>
-                <p>Programa de ejemplo · Sin inscripciones abiertas</p>
-                <p class="curso__descripcion">Compara perfiles de café y observa cómo cambia la preparación al modificar la molienda. Aprenderás a tomar notas útiles para elegir tu próxima bolsa sin depender solo de la palabra intensidad.</p>
-                <p><strong>Duración:</strong> Un encuentro de 2 horas.<br><strong>Modalidad:</strong> Presencial, con demostración y comparación de preparaciones.<br><strong>Precio de ejemplo:</strong> 1.500 UYU por persona</p>
-                <a href="curso-granos.html" class="boton boton--secundario" aria-label="Ver más: Elegir y moler tus granos de café">Ver más</a>
+                <h2 class="no-margin">Elegir y moler tus granos de café</h2>
+                <p class="curso__estado">Programa de ejemplo · Sin inscripciones abiertas</p>
+                <p class="curso__descripcion">Compara perfiles de café y observa cómo cambia la preparación al modificar
+                    la molienda. Aprenderás a tomar notas útiles para elegir tu próxima bolsa sin depender solo de la
+                    palabra intensidad.</p>
+                <p class="curso__resumen"><strong>Duración:</strong> Un encuentro de 2 horas.<br><strong>Modalidad:</strong> Presencial, con
+                    demostración y comparación de preparaciones.<br><strong>Precio de ejemplo:</strong> 1.500 UYU por
+                    persona</p>
+                <a href="curso-granos.html" class="boton boton--secundario"
+                    aria-label="Ver más: Elegir y moler tus granos de café">Ver más</a>
             </div>
-        </div>
+        </article>
 
-        <div class="curso" id="recetas">
+        <article class="curso" id="recetas">
             <div class="curso__imagen">
                 <img src="media/images/curso3.jpg" alt="imagen del curso">
             </div>
             <div class="curso__informacion">
-                <h4 class="no-margin">4 recetas de café para principiantes</h4>
-                <p>Programa de ejemplo · Sin inscripciones abiertas</p>
-                <p class="curso__descripcion">Practica cuatro bebidas con ingredientes sencillos y aprende a ajustar las proporciones. La propuesta se centra en organizar los ingredientes y repetir las preparaciones con la cafetera que ya tienes.</p>
-                <p><strong>Duración:</strong> Un encuentro de 2 horas.<br><strong>Modalidad:</strong> En línea, con preparación paso a paso.<br><strong>Precio de ejemplo:</strong> 1.200 UYU por persona</p>
-                <a href="curso-recetas.html" class="boton boton--secundario" aria-label="Ver más: 4 recetas de café para principiantes">Ver más</a>
+                <h2 class="no-margin">4 recetas de café para principiantes</h2>
+                <p class="curso__estado">Programa de ejemplo · Sin inscripciones abiertas</p>
+                <p class="curso__descripcion">Practica cuatro bebidas con ingredientes sencillos y aprende a ajustar las
+                    proporciones. La propuesta se centra en organizar los ingredientes y repetir las preparaciones con
+                    la cafetera que ya tienes.</p>
+                <p class="curso__resumen"><strong>Duración:</strong> Un encuentro de 2 horas.<br><strong>Modalidad:</strong> En línea, con
+                    preparación paso a paso.<br><strong>Precio de ejemplo:</strong> 1.200 UYU por persona</p>
+                <a href="curso-recetas.html" class="boton boton--secundario"
+                    aria-label="Ver más: 4 recetas de café para principiantes">Ver más</a>
             </div>
+        </article>
         </div>
     </main>
 
@@ -85,11 +100,11 @@
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <p class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></p>
                 </a>
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="cursos.html" class="navegacion__enlace" aria-current="page">Cursos</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                 </nav>
             </div>

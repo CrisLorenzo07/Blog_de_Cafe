@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="pagina-nosotros">
     <header class="header">
 
         <div class="centenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <p class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></p>
                 </a>
 
                 <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="nosotros.html" class="navegacion__enlace" aria-current="page">Nosotros</a>
                     <a href="cursos.html" class="navegacion__enlace">Cursos</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                 </nav>
@@ -37,22 +37,20 @@
         </div>
     </header>
 
-    <main class="contenedor">
-        <h3 class="centrar-texto">Sobre Nosotros</h3>
-        <div class="sobre-nosotros">
-            <div class="sobre-nosotros__imagen">
-                <img src="media/images/nosotros.jpg" alt="imagen nosotros">
+    <main class="contenedor nosotros-contenido">
+        <header class="nosotros-titulo"><h1>Sobre Nosotros</h1></header>
+        <section class="nosotros-presentacion" aria-labelledby="nosotros-introduccion">
+            <div class="nosotros-presentacion__imagen">
+                <img src="media/images/nosotros.jpg" alt="Preparación de café con utensilios sobre una mesa">
             </div>
-            <div class="sobre-nosotros__texto">
-                <h4>Un blog para aprender en casa</h4>
-                <p>BlogDeCafé es un proyecto web personal dedicado a aprender a preparar mejor café en casa. Se dirige a principiantes y aficionados que quieren entender qué cambia en su taza cuando eligen otros granos, ajustan la molienda o prueban una receta.</p>
-                <h4>Del grano hasta la taza</h4>
-                <p>El contenido se organiza en tres categorías: <strong>Granos y molienda</strong>, <strong>Métodos de preparación</strong> y <strong>Recetas de café</strong>. Las guías parten de utensilios domésticos y explican los pasos para que cada persona pueda adaptar la preparación a su rutina.</p>
-                <h4>Cómo contamos lo que aprendemos</h4>
-                <p>Los artículos se publican bajo el nombre de BlogDeCafé, con fecha y fuentes cuando se utilizan referencias externas. Diferenciamos las recetas propuestas de las recomendaciones de esas fuentes y evitamos presentar preferencias de sabor como reglas universales.</p>
-                <h4>Un proyecto en desarrollo</h4>
-                <p>El blog está ampliando sus contenidos y presenta propuestas de cursos relacionadas con las guías. Aún no hay convocatorias confirmadas. Por ahora, puedes empezar por <a href="granos-de-cafe.html">elegir tus granos</a>, seguir con <a href="entrada.html">la preparación en prensa francesa</a> y probar <a href="recetas-de-cafe.html">tres recetas sencillas</a>.</p>
+            <div class="nosotros-presentacion__texto">
+                <h2 id="nosotros-introduccion">Un blog para aprender en casa</h2><p>BlogDeCafé es un proyecto web personal dedicado a aprender a preparar mejor café en casa. Se dirige a principiantes y aficionados que quieren entender qué cambia en su taza cuando eligen otros granos, ajustan la molienda o prueban una receta.</p>
             </div>
+        </section>
+        <div class="nosotros-detalles">
+            <section class="nosotros-detalle" aria-labelledby="nosotros-tema-0"><h2 id="nosotros-tema-0">Del grano hasta la taza</h2><p>El contenido se organiza en tres categorías: <strong>Granos y molienda</strong>, <strong>Métodos de preparación</strong> y <strong>Recetas de café</strong>. Las guías parten de utensilios domésticos y explican los pasos para que cada persona pueda adaptar la preparación a su rutina.</p></section>
+            <section class="nosotros-detalle" aria-labelledby="nosotros-tema-1"><h2 id="nosotros-tema-1">Cómo contamos lo que aprendemos</h2><p>Los artículos se publican bajo el nombre de BlogDeCafé, con fecha y fuentes cuando se utilizan referencias externas. Diferenciamos las recetas propuestas de las recomendaciones de esas fuentes y evitamos presentar preferencias de sabor como reglas universales.</p></section>
+            <section class="nosotros-detalle" aria-labelledby="nosotros-tema-2"><h2 id="nosotros-tema-2">Un proyecto en desarrollo</h2><p>El blog está ampliando sus contenidos y presenta propuestas de cursos relacionadas con las guías. Aún no hay convocatorias confirmadas. Por ahora, puedes empezar por <a href="granos-de-cafe.html">elegir tus granos</a>, seguir con <a href="entrada.html">la preparación en prensa francesa</a> y probar <a href="recetas-de-cafe.html">tres recetas sencillas</a>.</p></section>
         </div>
     </main>
 
@@ -61,11 +59,11 @@
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <p class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></p>
                 </a>
 
                 <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="nosotros.html" class="navegacion__enlace" aria-current="page">Nosotros</a>
                     <a href="cursos.html" class="navegacion__enlace">Cursos</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                 </nav>
