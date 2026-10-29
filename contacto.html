@@ -26,7 +26,7 @@
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="contacto.html" class="navegacion__enlace" aria-current="page">Contacto</a>
                 </nav>
             </div>
         </div>
@@ -43,11 +43,13 @@
         <div class="contacto-bg"></div>
 
         <form class="formulario" id="consulta">
-            <p>Prepara una consulta y descárgala como archivo de texto. Este sitio de demostración no envía mensajes ni confirma inscripciones; el canal de contacto está pendiente de configurar.</p>
+            <p>Escríbenos para consultar sobre cursos, proponer colaboraciones o compartir comentarios sobre las guías del blog. Una consulta sobre un curso no confirma la inscripción ni reserva una plaza.</p>
             <div class="campo">
-                <label class="campo__label" for="curso">Curso</label>
+                <label class="campo__label" for="curso">Tema</label>
                 <select class="campo__field" id="curso" name="curso">
                     <option value="">Consulta general</option>
+                    <option value="colaboracion">Colaboraciones</option>
+                    <option value="comentario">Comentarios sobre el blog</option>
                     <option value="extraccion">Técnicas de extracción de café</option>
                     <option value="granos">Elegir y moler tus granos de café</option>
                     <option value="recetas">4 recetas de café para principiantes</option>
@@ -55,18 +57,24 @@
             </div>
             <div class="campo">
                 <label class="campo__label" for="nombre">Nombre</label>
-                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre" name="nombre" required>
+                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre" name="nombre" autocomplete="name" maxlength="100" required>
             </div>
             <div class="campo">
                 <label class="campo__label" for="email">E-mail</label>
-                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email" name="email" required>
+                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email" name="email" autocomplete="email" maxlength="254" required>
             </div>
             <div class="campo">
                 <label class="campo__label" for="mensaje">Mensaje</label>
-                <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" required></textarea>
+                <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" maxlength="5000" required></textarea>
             </div>
+            <div id="uso-datos" class="contacto-privacidad">
+                <h4>Cómo usamos tus datos</h4>
+                <p>El envío está pendiente de configurar. Por ahora, los datos que completes permanecen en este formulario y no se envían ni se guardan en un servidor. Evita incluir información sensible.</p>
+                <label><input type="checkbox" id="privacidad" name="privacidad" required> He leído cómo se usarán mis datos para atender esta consulta.</label>
+            </div>
+            <noscript><p>El envío de consultas todavía no está disponible.</p></noscript>
             <div class="campo">
-                <input type="submit" value="Descargar consulta" class="boton boton--primario">
+                <button type="submit" class="boton boton--primario">Enviar consulta</button>
             </div>
 
             <p id="consulta-estado" role="status" aria-live="polite"></p>
@@ -86,7 +94,7 @@
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="contacto.html" class="navegacion__enlace" aria-current="page">Contacto</a>
                 </nav>
             </div>
         </div>

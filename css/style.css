@@ -402,7 +402,7 @@ img {
 .formacion .header__texto { margin: 4rem auto 0; padding: 0 5% 6rem; max-width: 96rem; }
 .formacion .header__texto h2 { font-size: clamp(3rem, 4vw, 4.6rem); letter-spacing: -.08rem; }
 .formacion .header__texto p { margin-top: 1.6rem; color: #eee3d8; }
-.formacion .navegacion__enlace[aria-current="page"] { text-decoration: underline; text-underline-offset: .6rem; }
+.navegacion__enlace[aria-current="page"] { text-decoration: underline; text-underline-offset: .6rem; }
 .formacion main a:focus-visible { outline: 3px solid #a56b3f; outline-offset: 5px; }
 .formacion .boton {
   display: inline-flex;
@@ -516,3 +516,44 @@ img {
   .nosotros-detalle { padding: 2.4rem; }
   .nosotros-detalles { gap: 2rem; margin-top: 2rem; }
 }
+
+/* Información y estados del formulario de contacto. */
+#consulta.formulario {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 96rem;
+  border: 1px solid #d8c8b8;
+  border-radius: 1.8rem;
+  box-shadow: 0 1.2rem 3.6rem rgba(67, 43, 28, .1);
+  background: #fffdf9;
+  padding: clamp(2rem, 4vw, 5rem);
+}
+#consulta > p:first-child { margin-top: 0; margin-bottom: 3rem; color: #655b52; }
+#consulta .campo { align-items: baseline; gap: 1rem; }
+#consulta .campo__label { color: #49382d; font-weight: 700; }
+#consulta .campo__field {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid #bba897;
+  border-radius: .8rem;
+  background: #fff;
+  color: #322b26;
+  font: inherit;
+  line-height: 1.5;
+}
+#consulta .campo__field--textarea { resize: vertical; min-height: 16rem; }
+#consulta .campo__field:focus-visible,
+#consulta input[type="checkbox"]:focus-visible,
+#consulta button:focus-visible {
+  outline: 3px solid #774632;
+  outline-offset: 3px;
+}
+#consulta input[type="checkbox"] { accent-color: #774632; }
+#consulta button { border: 0; border-radius: .8rem; cursor: pointer; }
+.contacto-privacidad { border: 1px solid #e5d9cd; }
+.contacto-privacidad { margin: 2.4rem 0; padding: 2rem; background: #faf7f2; border-radius: .8rem; }
+.contacto-privacidad h4 { margin: 0; font-size: 2.2rem; }
+.contacto-privacidad label { display: block; }
+#consulta button:disabled { opacity: .65; cursor: wait; }
+#consulta-estado:not(:empty) { padding: 1.6rem; border-left: .4rem solid #774632; background: #faf7f2; }

@@ -18,24 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     consulta.addEventListener("submit", (event) => {
       event.preventDefault();
-      const texto = [
-        "Consulta de disponibilidad — BlogDeCafé",
-        `Nombre: ${document.getElementById("nombre").value.trim()}`,
-        `Correo: ${document.getElementById("email").value.trim()}`,
-        `Curso: ${curso.selectedOptions[0].textContent}`,
-        "",
-        document.getElementById("mensaje").value.trim(),
-      ].join("\n");
-      const url = URL.createObjectURL(new Blob([texto], { type: "text/plain;charset=utf-8" }));
-      const enlace = document.createElement("a");
-      enlace.href = url;
-      enlace.download = "consulta-blogdecafe.txt";
-      document.body.appendChild(enlace);
-      enlace.click();
-      enlace.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      for (const id of ["nombre", "mensaje"]) {
+        const campo = document.getElementById(id);
+        campo.value = campo.value.trim();
+      }
+      if (!consulta.reportValidity()) return;
       document.getElementById("consulta-estado").textContent =
-        "Se ha preparado el archivo para descargar. La consulta no se ha enviado ni se ha reservado una plaza.";
+        "El envío está pendiente de configurar. Tu consulta no se ha enviado.";
     });
   }
 });
