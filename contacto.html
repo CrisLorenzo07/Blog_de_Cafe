@@ -42,23 +42,34 @@
 
         <div class="contacto-bg"></div>
 
-        <form class="formulario">
+        <form class="formulario" id="consulta">
+            <p>Prepara una consulta y descárgala como archivo de texto. Este sitio de demostración no envía mensajes ni confirma inscripciones; el canal de contacto está pendiente de configurar.</p>
+            <div class="campo">
+                <label class="campo__label" for="curso">Curso</label>
+                <select class="campo__field" id="curso" name="curso">
+                    <option value="">Consulta general</option>
+                    <option value="extraccion">Técnicas de extracción de café</option>
+                    <option value="granos">Elegir y moler tus granos de café</option>
+                    <option value="recetas">4 recetas de café para principiantes</option>
+                </select>
+            </div>
             <div class="campo">
                 <label class="campo__label" for="nombre">Nombre</label>
-                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre">
+                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre" name="nombre" required>
             </div>
             <div class="campo">
                 <label class="campo__label" for="email">E-mail</label>
-                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email">
+                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email" name="email" required>
             </div>
             <div class="campo">
                 <label class="campo__label" for="mensaje">Mensaje</label>
-                <textarea class="campo__field campo__field--textarea" id="mensaje"></textarea>
+                <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" required></textarea>
             </div>
             <div class="campo">
-                <input type="submit" value="Enviar" class="boton boton--primario">
+                <input type="submit" value="Descargar consulta" class="boton boton--primario">
             </div>
 
+            <p id="consulta-estado" role="status" aria-live="polite"></p>
         </form>
 
 
