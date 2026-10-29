@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Café</title>
+    <title>Contacto: consultas y colaboraciones | BlogDeCafé</title>
+    <meta name="description" content="Consulta sobre cursos, comparte comentarios o propone colaboraciones a BlogDeCafé. El formulario está disponible con el envío pendiente de configurar.">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link
@@ -14,13 +15,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="pagina-contacto">
     <header class="header">
 
-        <div class="centenedor">
+        <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <p class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></p>
                 </a>
 
                 <nav class="navegacion">
@@ -31,18 +32,19 @@
             </div>
         </div>
         <div class="header__texto">
-            <h2 class="no-margin">Aprende a preparar mejor café en casa</h2>
+            <p class="header__promesa no-margin">Aprende a preparar mejor café en casa</p>
             <p class="no-margin">Desde el grano hasta la taza: guías y recetas para principiantes y aficionados.</p>
 
         </div>
     </header>
 
-    <main class="contenedor">
-        <h3 class="centrar-texto">Contacto</h3>
+    <main class="contenedor contacto-contenido">
+        <h1 class="centrar-texto contacto-titulo">Contacto</h1>
 
-        <div class="contacto-bg"></div>
+        <div class="contacto-bg" aria-hidden="true"></div>
 
-        <form class="formulario" id="consulta">
+        <form class="formulario" id="consulta" aria-describedby="consulta-ayuda">
+            <p id="consulta-ayuda">Los campos marcados con * son obligatorios. El envío está pendiente de configurar.</p>
             <p>Escríbenos para consultar sobre cursos, proponer colaboraciones o compartir comentarios sobre las guías del blog. Una consulta sobre un curso no confirma la inscripción ni reserva una plaza.</p>
             <div class="campo">
                 <label class="campo__label" for="curso">Tema</label>
@@ -56,21 +58,22 @@
                 </select>
             </div>
             <div class="campo">
-                <label class="campo__label" for="nombre">Nombre</label>
+                <label class="campo__label" for="nombre">Nombre *</label>
                 <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre" name="nombre" autocomplete="name" maxlength="100" required>
             </div>
             <div class="campo">
-                <label class="campo__label" for="email">E-mail</label>
-                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email" name="email" autocomplete="email" maxlength="254" required>
+                <label class="campo__label" for="email">E-mail *</label>
+                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email" name="email" aria-describedby="email-ayuda" autocomplete="email" maxlength="254" required>
             </div>
+            <p id="email-ayuda">Usa un correo con formato nombre@dominio.com.</p>
             <div class="campo">
-                <label class="campo__label" for="mensaje">Mensaje</label>
+                <label class="campo__label" for="mensaje">Mensaje *</label>
                 <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" maxlength="5000" required></textarea>
             </div>
             <div id="uso-datos" class="contacto-privacidad">
-                <h4>Cómo usamos tus datos</h4>
+                <h2>Cómo usamos tus datos</h2>
                 <p>El envío está pendiente de configurar. Por ahora, los datos que completes permanecen en este formulario y no se envían ni se guardan en un servidor. Evita incluir información sensible.</p>
-                <label><input type="checkbox" id="privacidad" name="privacidad" required> He leído cómo se usarán mis datos para atender esta consulta.</label>
+                <label><input type="checkbox" id="privacidad" name="privacidad" required> He leído cómo se usarán mis datos para atender esta consulta. *</label>
             </div>
             <noscript><p>El envío de consultas todavía no está disponible.</p></noscript>
             <div class="campo">
@@ -89,7 +92,7 @@
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <p class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></p>
                 </a>
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>

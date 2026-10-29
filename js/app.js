@@ -8,6 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const consulta = document.getElementById("consulta");
   if (consulta) {
+    consulta.querySelectorAll("[required]").forEach((campo) => {
+      campo.addEventListener("invalid", () => {
+        campo.setCustomValidity("");
+        if (campo.validity.valueMissing) {
+          campo.setCustomValidity(campo.type === "checkbox"
+            ? "Confirma que has leído cómo se usarán tus datos."
+            : "Completa este campo obligatorio.");
+        } else if (campo.validity.typeMismatch) {
+          campo.setCustomValidity("Introduce un correo válido, como nombre@dominio.com.");
+        }
+      });
+      campo.addEventListener("input", () => campo.setCustomValidity(""));
+      campo.addEventListener("change", () => campo.setCustomValidity(""));
+    });
     const curso = document.getElementById("curso");
     const cursoSolicitado = new URLSearchParams(window.location.search).get("curso");
     if (Array.from(curso.options).some((option) => option.value === cursoSolicitado)) {

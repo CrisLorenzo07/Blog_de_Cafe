@@ -15,7 +15,8 @@ html {
 }
 
 *,
-*::before *::after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -311,37 +312,26 @@ img {
 .inicio *, .inicio *::before, .inicio *::after { box-sizing: border-box; }
 .inicio .contenedor { width: min(90%, 116rem); }
 .inicio .footer > .contenedor { width: min(94%, 144rem); }
-.inicio .header {
-  height: auto;
-  min-height: 62rem;
-  background-image: linear-gradient(90deg, rgba(26, 19, 15, .88), rgba(26, 19, 15, .28)), url(../media/images/banner.jpg);
-}
-.inicio .header__texto { margin: 0 auto; padding: 8rem 0 9rem; text-align: left; }
-.inicio .header__texto h1 { max-width: 72rem; font-size: clamp(3.8rem, 5vw, 6.4rem); line-height: 1.08; letter-spacing: -.18rem; }
-.inicio .header__texto > p:not(.editorial-etiqueta) { max-width: 56rem; margin-top: 2.4rem; color: #eee3d8; font-size: 1.8rem; }
 .inicio .editorial-etiqueta { font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: .18rem; color: #774632; margin: 0 0 1.6rem; }
-.inicio .header .editorial-etiqueta { color: #eac6a1; }
-.inicio .header__texto .boton { margin: 3rem 0 0; background: #edcfad; color: #322419; }
 .inicio .contenido-principal { padding-top: 7rem; gap: 5rem; align-items: start; }
-.inicio .blog > h3 { margin: 0 0 2rem; font-size: clamp(3rem, 3vw, 4rem); letter-spacing: -.08rem; }
+.inicio .blog > h1 { margin: 0 0 2rem; font-size: clamp(3.2rem, 4vw, 4.6rem); letter-spacing: -.12rem; }
 .inicio .blog > p:not(.editorial-etiqueta) { color: #655b52; margin: 0 0 3rem; }
 .inicio .temas-editoriales { margin-bottom: 4rem; padding: 2.4rem; border: 1px solid #e5d9cd; border-radius: 1.2rem; background: #f1eae1; }
-.inicio .temas-editoriales h4 { font-size: 2rem; margin: 0 0 1.2rem; }
+.inicio .temas-editoriales h2 { font-size: 2rem; margin: 0 0 1.2rem; }
 .inicio .temas-editoriales ul { margin: 0; padding-left: 2rem; color: #655b52; font-size: 1.4rem; }
 .inicio .temas-editoriales li + li { margin-top: .8rem; }
-.inicio .entrada { background: #fffdf9; border: 1px solid #e8dfd5; border-radius: 1.6rem; overflow: hidden; margin-bottom: 3rem; }
-.inicio .entrada:last-of-type { border: 1px solid #e8dfd5; }
+.inicio .entrada { background: #fffdf9; border: 1px solid #cbb5a2; border-radius: 1.6rem; overflow: hidden; margin-bottom: 4rem; box-shadow: 0 .6rem 2rem rgba(67, 43, 28, .07); }
 .inicio .entrada__imagen img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
 .inicio .entrada__contenido { padding: 2.8rem; }
-.inicio .entrada__contenido h4 { font-size: 2.7rem; letter-spacing: -.05rem; }
+.inicio .entrada__contenido h2 { font-size: 2.7rem; letter-spacing: -.05rem; }
 .inicio .entrada__contenido p { color: #655b52; }
 .inicio .boton { display: inline-flex; align-items: center; justify-content: center; gap: 1.5rem; border-radius: .6rem; padding: 1.2rem 2rem; font-size: 1.4rem; text-transform: none; line-height: 1.5; margin-bottom: 0; transition: background-color .15s ease; }
 .inicio .boton--primario { background: #322b26; }
 .inicio .boton:hover { background: #583727; color: #fff; }
 .inicio a:focus-visible { outline: 3px solid #b46f35; outline-offset: 5px; }
 .inicio .sidebar { padding: 3rem; background: #efe7dc; border: 1px solid #e5d9cd; border-radius: 1.6rem; }
-.inicio .sidebar h3 { font-size: 2.7rem; margin: 0 0 2.8rem; }
-.inicio .sidebar h4 { font-size: 2.2rem; }
+.inicio .sidebar > h2 { font-size: 2.7rem; margin: 0 0 2.8rem; }
+.inicio .sidebar h3 { font-size: 2.2rem; }
 .inicio .cursos { margin: 0; }
 .inicio .widget-curso { border-color: #d8c8b7; padding-bottom: 2.8rem; margin-bottom: 2.8rem; }
 .inicio .widget-curso:last-child { padding-bottom: 0; margin-bottom: 0; }
@@ -352,10 +342,6 @@ img {
 .inicio .footer > p { font-size: 1.2rem; color: #c9bcae; margin: 1rem 0 0; }
 @media (min-width: 768px) { .inicio .contenido-principal { grid-template-columns: minmax(0, 1fr) 32rem; } }
 @media (max-width: 767px) {
-  .inicio .header { min-height: auto; }
-  .inicio .header__texto { padding: 5rem 0 6rem; }
-  .inicio .header__texto h1 { letter-spacing: -.1rem; }
-  .inicio .header__texto > p:not(.editorial-etiqueta) { font-size: 1.6rem; }
   .inicio .contenido-principal { padding-top: 4rem; }
   .inicio .entrada__contenido, .inicio .sidebar { padding: 2.2rem; }
   .inicio .sidebar { margin-top: 4rem; }
@@ -394,13 +380,21 @@ img {
   line-height: 1.75;
 }
 .formacion *, .formacion *::before, .formacion *::after { box-sizing: border-box; }
+.pagina-contacto > .header,
+.inicio > .header,
 .formacion > .header {
   height: auto;
   min-height: 42rem;
   background-image: linear-gradient(90deg, rgba(26, 19, 15, .85), rgba(26, 19, 15, .4)), url(../media/images/banner.jpg);
 }
+.pagina-contacto .header__texto,
+.inicio .header__texto,
 .formacion .header__texto { margin: 4rem auto 0; padding: 0 5% 6rem; max-width: 96rem; }
-.formacion .header__texto h2 { font-size: clamp(3rem, 4vw, 4.6rem); letter-spacing: -.08rem; }
+.pagina-contacto .header__texto .header__promesa,
+.inicio .header__texto .header__promesa,
+.formacion .header__texto .header__promesa { font-size: clamp(3rem, 4vw, 4.6rem); letter-spacing: -.08rem; }
+.pagina-contacto .header__texto p,
+.inicio .header__texto > *,
 .formacion .header__texto p { margin-top: 1.6rem; color: #eee3d8; }
 .navegacion__enlace[aria-current="page"] { text-decoration: underline; text-underline-offset: .6rem; }
 .formacion main a:focus-visible { outline: 3px solid #a56b3f; outline-offset: 5px; }
@@ -421,7 +415,10 @@ img {
 .formacion .boton:hover { background: #583727; }
 .formacion .catalogo, .formacion .ficha-curso { padding-top: 6rem; padding-bottom: 2rem; }
 .catalogo__titulo { max-width: 72rem; margin-bottom: 3.6rem; }
-.catalogo__titulo h1 { font-size: clamp(3.2rem, 4vw, 4.6rem); letter-spacing: -.12rem; margin: 0; }
+.catalogo__titulo h1, .contacto-titulo { font-size: clamp(3.2rem, 4vw, 4.6rem); letter-spacing: -.12rem; margin: 0; }
+.contacto-titulo { margin-bottom: clamp(3.6rem, 5vw, 6rem); }
+.contacto-contenido { padding-top: 6rem; }
+@media (max-width: 767px) { .contacto-contenido { padding-top: 3.6rem; } }
 .catalogo__rejilla { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.8rem; }
 .formacion .curso {
   padding: 0;
@@ -467,7 +464,11 @@ img {
   .ficha-curso__columnas { grid-template-columns: minmax(0, 1fr) 28rem; gap: 2.4rem; }
 }
 @media (max-width: 767px) {
+  .pagina-contacto > .header,
+.inicio > .header,
   .formacion > .header { min-height: auto; }
+  .pagina-contacto .header__texto,
+.inicio .header__texto,
   .formacion .header__texto { margin-top: 2rem; padding-bottom: 4rem; }
   .formacion .catalogo, .formacion .ficha-curso { padding-top: 3.6rem; }
   .formacion .curso { display: flex; }
@@ -489,7 +490,7 @@ img {
   background-image: linear-gradient(90deg, rgba(26, 19, 15, .85), rgba(26, 19, 15, .4)), url(../media/images/banner.jpg);
 }
 .pagina-nosotros .header__texto { margin: 4rem auto 0; padding: 0 5% 6rem; max-width: 96rem; }
-.pagina-nosotros .header__texto h2 { font-size: clamp(3rem, 4vw, 4.6rem); letter-spacing: -.08rem; }
+.pagina-nosotros .header__texto .header__promesa { font-size: clamp(3rem, 4vw, 4.6rem); letter-spacing: -.08rem; }
 .pagina-nosotros .header__texto p { margin-top: 1.6rem; color: #eee3d8; }
 .pagina-nosotros .navegacion__enlace[aria-current="page"] { text-decoration: underline; text-underline-offset: .6rem; }
 .nosotros-contenido { padding-top: 6rem; padding-bottom: 2rem; }
@@ -553,7 +554,13 @@ img {
 #consulta button { border: 0; border-radius: .8rem; cursor: pointer; }
 .contacto-privacidad { border: 1px solid #e5d9cd; }
 .contacto-privacidad { margin: 2.4rem 0; padding: 2rem; background: #faf7f2; border-radius: .8rem; }
-.contacto-privacidad h4 { margin: 0; font-size: 2.2rem; }
+.contacto-privacidad h2 { margin: 0; font-size: 2.2rem; }
 .contacto-privacidad label { display: block; }
 #consulta button:disabled { opacity: .65; cursor: wait; }
 #consulta-estado:not(:empty) { padding: 1.6rem; border-left: .4rem solid #774632; background: #faf7f2; }
+
+/* Jerarquía semántica y foco visible para navegación por teclado. */
+.header__promesa { font-family: var(--fuenteHeading); font-size: 4rem; font-weight: 700; line-height: 1.2; }
+:where(a, button, input, select, textarea):focus-visible { outline: 3px solid #774632; outline-offset: 4px; }
+.header a:focus-visible, .footer a:focus-visible { outline-color: #edcfad; }
+#email-ayuda { color: #655b52; font-size: 1.4rem; }
