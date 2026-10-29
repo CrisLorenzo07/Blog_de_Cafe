@@ -1,0 +1,37 @@
+[
+  {
+    "archivo": "arabica-robusta.png",
+    "herramienta": "image_gen (integrada)",
+    "prompt": "Use case: photorealistic-natural. Asset type: individual landscape editorial photograph for a Spanish coffee blog topic card. Subject: Two small ceramic bowls of roasted coffee beans side by side, elongated beans in one and rounder beans in the other, subtle difference in shape, no labels. Style: realistic premium editorial food photography, warm natural window light, muted cream and coffee brown palette, lightly textured wood and linen, plausible everyday equipment, no people. Composition: horizontal 3:2 photograph, subjects clearly readable at thumbnail scale, uncluttered, leave safe edges for cropping to 16:9. No text, no logos, no watermarks. Generate ONE photograph only, no collage."
+  },
+  {
+    "archivo": "ajustes-extraccion.png",
+    "herramienta": "image_gen (integrada)",
+    "prompt": "Use case: photorealistic-natural. Asset type: individual landscape editorial photograph for a Spanish coffee blog topic card. Subject: Manual burr coffee grinder, small dish of ground coffee, digital kitchen scale with a glass brewer and gooseneck kettle with a plain dial thermometer; tidy home coffee preparation. Style: realistic premium editorial food photography, warm natural window light, muted cream and coffee brown palette, lightly textured wood and linen, plausible everyday equipment, no people. Composition: horizontal 3:2 photograph, subjects clearly readable at thumbnail scale, uncluttered, leave safe edges for cropping to 16:9. No text, no logos, no watermarks. Generate ONE photograph only, no collage."
+  },
+  {
+    "archivo": "recetas-cantidades.png",
+    "herramienta": "image_gen (integrada)",
+    "prompt": "Use case: photorealistic-natural. Asset type: individual landscape editorial photograph for a Spanish coffee blog topic card. Subject: Three homemade coffee drinks: a glass latte, black iced coffee with clear ice cubes, and cocoa coffee in a ceramic mug; a measuring jug and teaspoon arranged nearby. Style: realistic premium editorial food photography, warm natural window light, muted cream and coffee brown palette, lightly textured wood and linen, plausible everyday equipment, no people. Composition: horizontal 3:2 photograph, subjects clearly readable at thumbnail scale, uncluttered, leave safe edges for cropping to 16:9. No text, no logos, no watermarks. Generate ONE photograph only, no collage."
+  },
+  {
+    "archivo": "metodos-preparacion.png",
+    "herramienta": "image_gen (integrada)",
+    "prompt": "Use case: photorealistic-natural. Asset type: individual landscape editorial photograph for a Spanish coffee blog topic card. Subject: French press, ceramic pour-over dripper with paper filter over a server, and small espresso cup next to a compact espresso machine, three distinct preparation methods in a home kitchen. Style: realistic premium editorial food photography, warm natural window light, muted cream and coffee brown palette, lightly textured wood and linen, plausible everyday equipment, no people. Composition: horizontal 3:2 photograph, subjects clearly readable at thumbnail scale, uncluttered, leave safe edges for cropping to 16:9. No text, no logos, no watermarks. Generate ONE photograph only, no collage."
+  },
+  {
+    "archivo": "conservacion-frescura.png",
+    "herramienta": "image_gen (integrada)",
+    "prompt": "Use case: photorealistic-natural. Asset type: individual landscape editorial photograph for a Spanish coffee blog topic card. Subject: Open opaque airtight coffee canister filled with whole roasted beans, lid beside it, closed plain coffee bag in background, shaded kitchen cupboard backdrop. Style: realistic premium editorial food photography, warm natural window light, muted cream and coffee brown palette, lightly textured wood and linen, plausible everyday equipment, no people. Composition: horizontal 3:2 photograph, subjects clearly readable at thumbnail scale, uncluttered, leave safe edges for cropping to 16:9. No text, no logos, no watermarks. Generate ONE photograph only, no collage."
+  },
+  {
+    "archivo": "errores-preparacion.png",
+    "herramienta": "image_gen (integrada)",
+    "prompt": "Use case: photorealistic-natural. Asset type: individual landscape editorial photograph for a Spanish coffee blog topic card. Subject: A home coffee troubleshooting worktop: uneven pile of ground coffee beside an overfilled tablespoon, coffee-stained French press, clean digital scale and timer set nearby, coherent uncluttered scene. Style: realistic premium editorial food photography, warm natural window light, muted cream and coffee brown palette, lightly textured wood and linen, plausible everyday equipment, no people. Composition: horizontal 3:2 photograph, subjects clearly readable at thumbnail scale, uncluttered, leave safe edges for cropping to 16:9. No text, no logos, no watermarks. Generate ONE photograph only, no collage."
+  },
+  {
+    "archivo": "equipo-presupuesto.png",
+    "herramienta": "image_gen (integrada)",
+    "prompt": "Use case: photorealistic-natural. Asset type: individual landscape editorial photograph for a Spanish coffee blog topic card. Subject: A considered selection of home coffee equipment organized on a wooden counter: simple ceramic dripper, hand grinder, kitchen scale, French press, plain notebook; accessible starter equipment. Style: realistic premium editorial food photography, warm natural window light, muted cream and coffee brown palette, lightly textured wood and linen, plausible everyday equipment, no people. Composition: horizontal 3:2 photograph, subjects clearly readable at thumbnail scale, uncluttered, leave safe edges for cropping to 16:9. No text, no logos, no watermarks. Generate ONE photograph only, no collage."
+  }
+]

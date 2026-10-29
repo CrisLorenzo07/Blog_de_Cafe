@@ -362,9 +362,14 @@ img {
 .aviso-ejemplo { background: #f1eae1; border-left: .4rem solid #774632; padding: 1.6rem 2rem; }
 .lectura dd { margin: .4rem 0 2rem; }
 .lectura .boton { color: #fff; text-decoration: none; }
-.calendario-editorial { padding-left: 2.4rem; }
-.calendario-editorial li { padding: 1rem 0 2rem; border-bottom: 1px solid #e5d9cd; }
-.calendario-editorial h2 { margin-top: 1rem; }
+.calendario-editorial { padding: 0; list-style: none; display: grid; gap: 3rem; margin: 3rem 0; }
+.calendario-editorial li { padding: 0; border: 1px solid #d8c8b8; border-radius: 1.4rem; overflow: hidden; background: #fffdf9; }
+.lectura .calendario-editorial li + li { margin-top: 0; }
+.calendario-editorial__imagen { display: block; }
+.calendario-editorial__imagen img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.calendario-editorial__contenido { padding: clamp(2rem, 4vw, 3rem); }
+.calendario-editorial__contenido h2 { margin: 0 0 1.6rem; }
+.calendario-editorial__contenido p:last-child { margin-bottom: 0; }
 @media (max-width: 600px) {
   #consulta .campo { flex-direction: column; }
   #consulta .campo__label { flex: auto; text-align: left; }
